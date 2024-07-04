@@ -1,0 +1,279 @@
+\documentclass{article}
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+
+\colorlet{LightGray}{White!90!Periwinkle}
+\colorlet{LightOrange}{Orange!15}
+\colorlet{LightGreen}{Green!15}
+\colorlet{LightBlue}{Blue!15}
+\colorlet{LightRed}{Red!15}
+
+
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Prob}{\mathbb{P}}
+
+\declaretheoremstyle[name=Theorem,]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightGray}
+
+\declaretheoremstyle[name=Proposition,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{proposition}
+\tcolorboxenvironment{proposition}{colback=LightOrange}
+
+\declaretheoremstyle[name=Definition,]{definsty}
+\declaretheorem[style=definsty,numberlike=theorem]{definition}
+\tcolorboxenvironment{definition}{colback=LightGreen}
+
+\declaretheoremstyle[name=example,]{examsty}
+\declaretheorem[style=examsty,numberlike=theorem]{example}
+\tcolorboxenvironment{example}{colback=LightRed}
+
+\declaretheoremstyle[name=remark,]{Remarksty}
+\declaretheorem[style=Remarksty,numberlike=theorem]{remark}
+\tcolorboxenvironment{remark}{colback=LightBlue}
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+
+% ------------------------------------------------------------------------------
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% Cover Page and ToC
+% ------------------------------------------------------------------------------
+
+\title{ \normalsize \textsc{}
+		\\ [2.0cm]
+		\HRule{1.5pt} \\
+		\LARGE \textbf{\uppercase{Probability theory}
+		\HRule{2.0pt} \\ [0.6cm] \LARGE{Study Note} \vspace*{10\baselineskip}}
+		}
+\date{}
+\author{\textbf{Author} \\ 
+		Sam Ren \\
+		Grinnell College \\
+		\today }
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+% ------------------------------------------------------------------------------
+
+\section*{Acknowledgements}
+I finsihed this study notes by simply collected the concepts and terms from @brightsideofmaths youtube videos, here is the link: \hyperlink{https://www.youtube.com/playlist?list=PLBh2i93oe2qswFOC98oSFc37-0f4S3D4z}{Video link}. At the same time I would like to sicerely thank to my teachers and friends. Without them this note would not be done.
+\newpage
+
+\section{Measure Theory}
+\textbf{This section is not necessary for later studying but it helps with understanding those abstract concepts}
+
+
+
+
+
+
+
+
+\newpage
+\section{Probability Measure}
+	Probability Measure is the measure with total mass 1, where we call it sample space $\Omega,Area(\Omega)=1$. In math we write:
+	\begin{equation*}
+		\mathbb{P}: A\to \R 
+	\end{equation*}
+	Where $A$ is the collection of subsets, then we have:
+	\begin{equation*}
+		\Prob (\Omega)=1,
+		\Prob(A)\in [0,1]
+	\end{equation*}
+It is easy to notice that if two sets($A,B$) are disjointed($A\cap B=\emptyset$) then we have:
+\begin{equation*}
+	\Prob( A\cup B)=\Prob(A)+\Prob(B)
+\end{equation*}
+
+\begin{theorem}
+	If we have a sequence of disjoin sets $A_i,i\in \N$ then we have:
+	\begin{equation*}
+		\Prob(\bigcup_{i=1}^{\infty}A_i)=\sum_{i=1}^{\infty}\Prob(A_i)
+	\end{equation*}
+\end{theorem}
+
+\begin{definition}
+	Let $\Omega$ be a set. A collection of subsets $\mathcal{A}\subseteq \mathcal{P}(\Omega)$ ( $\mathcal{P}$ is the power set) is called a sigma algebra($\sigma-$Algebra) if:
+	\begin{enumerate}
+		\item $\Omega,\emptyset\in \mathcal{A}$
+		\item If $A\in \mathcal{A}$ then $A^c\in \mathcal{A}$
+		\item If $A_1,A_2,A_3,...\in \mathcal{A}$ then $\bigcup_{i=1}^{\infty}A_i\in \mathcal{A}$
+	\end{enumerate}
+\end{definition}
+
+In Probability theory we call the elements in $\sigma$-algebra events. Then we are going to define the probability measure properly.
+\begin{definition}
+	Let $\mathcal{A}\subseteq \mathcal{P}(\Omega)$ is a sigma-algebra. A map $\Prob: \mathcal
+	{A}\to [0,1]$ is called probability measure if:
+	\begin{enumerate}
+		\item $\Prob(\Omega)=1$
+		\item $\Prob(\emptyset)=0$
+		\item $\Prob(\bigcup_{i=1}^{\infty}A_i)=\sum_{i=1}^{\infty}\Prob(A_i)$ where $i\neq j$
+	\end{enumerate} 
+\end{definition}
+
+\begin{example}
+	If we have $\Omega=\{1,2,3,4,5,6\}$, then $\mathcal{A}=\mathcal{P}(\Omega)$ we have:
+	\begin{equation*}
+		\Prob: \mathcal{A}\to [0,1],\Prob(A):=\frac{|A|}{|\Omega |}
+	\end{equation*}
+\end{example}
+
+\begin{proof}
+	Prove that $\Prob( A^c)=1-\Prob(A)$
+\end{proof}
+
+\subsection{Discrete \& Continuous Probability measure}
+We are going to discuss two situations where the sample space is either discrete or continuous. Where at here the term \textbf{Discrete} means the sample space is either countable or finite. For term \textbf{Continuous} the sample space is either infinite or uncountable.
+
+
+\begin{table}[hbt]
+\centering
+  \begin{tabular}{l|c|c}
+   Type & discrete & continuous \\
+    \hline
+ Sample space   & $\Omega$ countable or finite& $\Omega\subseteq \R^n$ uncountable, $\Omega\in \mathcal{B}(\R^n)$ \\
+ $\sigma-$algebra   & $\mathcal{A}=\mathcal{P}(\Omega)$ & $\mathcal{A}=\mathcal{B}(\Omega)$\\
+ Prob Measure & $\Prob: \mathcal{A}\to [0,1]$ & $\Prob: \mathcal{A}\to [0,1]$\\
+ Determined by & $\Prob(\{\omega\}),\forall \omega\in \Omega$ & \\
+mass function & $(p_\omega)_{\omega\in \Omega}$ with $p_\omega\geq 0,\sum_{\omega\in \Omega}p_\omega=1$ & $f:\Omega\to \R$ with $f(x)\geq 0,\int_{ \Omega}f(x)dx=1$ \\
+ Definition & $\Prob(A)= \sum_{\omega\in A}p_\omega=1$ & $\Prob(A)=\int_Af(x)dx$
+  \end{tabular}
+  \caption{Discrete and continuous sample space explaination table}
+\end{table}
+For continous probability measure we need to ensure that $\Omega$ is measuralbe which we are going to discuss later. Here is an example for continuous measure:
+
+\begin{example}
+	For $\Omega=[0,2]$ we have prob density function $f(x)=\frac{1}{2},f:\Omega\to \R$. Hence:
+	\begin{equation*}
+		\Prob(\Omega)=\int_0^2f(x)dx=\frac{1}{2} \int_0^21dx=1
+	\end{equation*} 
+	Therefore we would have conclusion:
+	\begin{equation*}
+		\Prob(A)=\int_A f(x)dx=\frac{1}{2}\int_A1dx=\frac{1}{2}\text{(Lebesgue measure)Length of A}
+	\end{equation*}
+	We would discuss the Lebesgue measure later.
+\end{example}
+
+\subsection{Binomial Distribution}
+A binomial(two outcomes) distribution is foundamental to the probability theory, and it also require a definition(For now this definition is improper):
+\begin{definition}
+	A binomial distribution can be determined by following features:
+	\begin{enumerate}
+		\item There is no order
+		\item With replacements (That is, does not change the sample space)
+		\item There are only two outcomes
+	\end{enumerate}
+	If it is a binomial distribution we denote it as $\Prob=B(n,p)$. For a binomial distribution we have:
+	\begin{equation*}
+		\Omega=\{0,1,2,3,...,n\},\Prob(\{k\})= {n\choose k}p^k(1-p)^{n-k}
+	\end{equation*}
+\end{definition}
+
+\subsection{Product Probability Spaces}
+In previous sections we already introduced the probability measure($\Prob$), the $\sigma$-algebra($\mathcal{A}$) and sample space($\Omega$). In this section we are going to introduce the probability space which is important in precisely proof and mathematics content.
+\begin{definition}
+	 Probability space is a triple combination$(\Omega_n,\mathcal{A}_n,\Prob_n), n\in \{1,2,3,...\}$. Then the product space($\Omega,\mathcal{A},\Prob$) is given by:\begin{itemize}
+	 	\item $\Omega=\Omega_1\times\Omega_2\times\Omega_3\times...=\prod_{i\in \N}\Omega_i$
+	 	\item $\mathcal{A}$=$\sigma(\Omega_1\times{A}_2\times\Omega_3\times...)$ The choice of $A_n\in \mathcal{A}$ is not restricted by 2, it can be any number. Hence we just simply replace one $\Omega_i$ with $A_i$ to construct.
+	 	\item $\Prob(A_1\times A_2\times {A}_3\times ...\times A_m\times \Omega_{m+1}\times \Omega_{m+2}\times ...)=\Prob(A_1)\cdot\Prob(A_2)\cdot...\cdot \Prob(A_m)$
+	 \end{itemize}
+
+\end{definition}
+You can find examples in this \hyperlink{https://www.youtube.com/watch?v=7WvdpFqptZk&list=PLBh2i93oe2qswFOC98oSFc37-0f4S3D4z&index=5}{Link}. 
+
+\subsection{Hypergeometric Distribution(Multivariant)}
+For this distribution we consider the sample size $n$ and without replacement and unordered. Let's begin with an example:
+\begin{example}
+Let elements in set $S$ be the color of balls:
+	\begin{equation*}
+	S=\{0,1,2,3\}
+\end{equation*}
+If we have two 0 and 1 for others then we have a $(2,1,1,1)$. At the same time there are many functions where mapping set $S$ to $\N$. We denote the set of these functions as $\N^S$. We now can define the sample space:
+\begin{equation*}
+	\Omega=\{(k_s)_{s\in S}\in \N^S| \sum_{s\in S}k_s=n        \}
+\end{equation*}
+Let's denote $N_s$ as the number of balls in color $s$ and $N$ as the total number:
+Then we would have:
+\begin{equation*}
+	\Prob((k_s)_{s\in S})=\frac{\prod_{s\in S}{N_s\choose k_s}}{{N\choose k}}
+\end{equation*}
+
+\end{example}
+
+\begin{definition}
+	For hypergeometric distribution, we have (variant)set $S=\{0,1,2,...,n\}$ and sample space $\Omega=\{0,1,2,3,...,n\}$:
+	\begin{equation*}
+		\Prob((k_s)_{s\in S})=\frac{\prod_{s\in S}{N_s\choose k_s}}{{N\choose k}}
+	\end{equation*}
+\end{definition}
+
+
+
+
+
+\section{Conditional Probability}
+
+
+
+
+
+
+
+\newpage
+
+% ------------------------------------------------------------------------------
+% Reference and Cited Works
+% ------------------------------------------------------------------------------
+
+\bibliographystyle{IEEEtran}
+\bibliography{References.bib}
+
+% ------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
