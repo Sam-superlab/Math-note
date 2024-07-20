@@ -701,6 +701,22 @@ It is obvious that only smooth function are differentiable. Now here are some ex
 By take left and right limit of the function at 0 it is obvious that we will get 2 results: $\{1,-1\}$
 \end{example}
 
+\section{The mean value theorem}
+We now shall talk about a baby version of Mean value theorem which named as Rolles theorem:
+\begin{theroem}
+   If funtion $f$ is a funtion where differentiable on $[a,b]$ and $f(a)=f(b)$ then there is $\bar{x}\in (a,b)$ where $f'(\bar{x})=0$
+\end{theorem}
+We shall now show a proof of this theorem:
+\begin{proof}[Proof of Rolles theorem]
+  By the extreme value theorem, we have $f$ has maximum and minimum value on $[a,b]$. If the maximum and minimum value are the same then we have $f$ is constant and $f'(\bar{x})=0$. If they are not the same,
+  then we have $f$ has maximum and minimum value. Therefore there is $\bar{x}$ where $f'(\bar{x})=0$.
+\end{proof}
+Now we shall talk about the mean value theorem:
+  \begin{theorem}[Mean value theorem]
+We shall notice that we can rewrite the Rolles theorem as a special case of mean value theorem.
+For function $f$ is a funtion where differentiable on $[a,b]$ then there is $\bar{x}\in (a,b)$
+where $f'(\bar{x})=\frac{f(b)-f(a)}{b-a}$ and we can rewrite it as: $f'(\bar{x})=\frac{f(b)-f(a)}{b-a}$
+\end{theorem}
 
 \subsection{Talor series and Forier series}
 Just like we talked about in the part of continuous functions\ref{contfunc}. The expontial function can be defined in a series form. However this property is, somehow can be generalize. Which means every function(smooth function, differentiable thorugh out the domain) can be descibr into some infinty series.
@@ -764,6 +780,12 @@ Now lets get into the topic, which 'Integration' the concept first appear in thi
 \end{definition}
 
 
+\begin{definition}[]
+  For $$I=[a,b], a<b$$ we define the Riemann integral of a function $f:I\to \R$ as:
+  \begin{equation}
+    \int_a^b f(x)dx:=\sup\{p.c.\int_{[P]}f|P \text{ is partition of } I\} 
+  \end{equation}
+\end{definition}
 
 
 
@@ -828,6 +850,17 @@ Now lets get into the topic, which 'Integration' the concept first appear in thi
 \section*{Axioms}
 
 \subsection{The Peano axioms}
+The Peano axioms are a set of axioms for the natural numbers presented by the 19th century Italian mathematician Giuseppe Peano.
+These axioms have been used nearly unchanged in a number of metamathematical investigations, including research into fundamental questions of the foundations of mathematics.
+
+In mathematical language, the Peano axioms read as follows:
+\begin{itemize}
+  \item 0 is a natural number.
+  \item Every natural number has a successor, which is also a natural number.
+  \item 0 is not the successor of any natural number.
+  \item Two natural numbers with the same successor are equal.
+  \item (Induction axiom) If a property is possessed by 0 and also by the successor of every natural number by which it is possessed, then it is possessed by all natural numbers.
+\end{itemize}
 
 
 
@@ -840,8 +873,11 @@ Now lets get into the topic, which 'Integration' the concept first appear in thi
 \end{itemize}
 
 
-\subsection{}
-
+\subsection{Axiom of choice}
+The Axiom of Choice is a mathematical axiom that is used in set theory.
+It was formulated in 1904 by Ernst Zermelo. The axiom states that given a collection of sets, it is possible to choose exactly one element from each set, even if the collection is infinite. In other words, the axiom of choice allows for the construction of a set from an infinite number of other sets, each of which has exactly one element.
+In mathematical terms, the axiom of choice states that for any set \( S \) of non-empty sets, there exists a function \( f \) such that for every set \( A \) in \( S \), \( f(A) \) is an element of \( A \).
+It is not that intuitive, but it is a very important axiom in set theory, and it has many applications in mathematics, including in the study of infinite sets and in the construction of mathematical models.
 
 
 
