@@ -703,7 +703,7 @@ By take left and right limit of the function at 0 it is obvious that we will get
 
 \section{The mean value theorem}
 We now shall talk about a baby version of Mean value theorem which named as Rolles theorem:
-\begin{theroem}
+\begin{theorem}
    If funtion $f$ is a funtion where differentiable on $[a,b]$ and $f(a)=f(b)$ then there is $\bar{x}\in (a,b)$ where $f'(\bar{x})=0$
 \end{theorem}
 We shall now show a proof of this theorem:
@@ -719,10 +719,28 @@ where $f'(\bar{x})=\frac{f(b)-f(a)}{b-a}$ and we can rewrite it as: $f'(\bar{x})
 \end{theorem}
 
 \subsection{Talor series and Forier series}
-Just like we talked about in the part of continuous functions\ref{contfunc}. The expontial function can be defined in a series form. However this property is, somehow can be generalize. Which means every function(smooth function, differentiable thorugh out the domain) can be descibr into some infinty series.
-
-
-
+In this subsection we are going to talk about two important series which are used to apporximate the functions by polynomial functions,
+they are Talor series and Forier series. 
+\begin{definition}[Talor series]
+Talor series is a representation of a function as an infinite sum of terms that are calculated from the values of the function's derivatives at a single point.
+Where in mathematiacl language, we write the Talor series of a function $f$ at point $x_0$ as: 
+\begin{equation*}
+  f(x)=\sum_{n=0}^\infty \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n
+  \end{equation*}
+\end{definition}
+While the $n$ gets larger, the approximation of the function gets better. However, the convergence of the series is not guaranteed.
+It is because the function may not be smooth enough. 
+Now we shall introduce the Forier series:
+\begin{definition}[Forier series]
+  Forier series is a way to represent a function as the sum of simple sine waves. The Forier series of a function $f$ is:
+  \begin{equation}
+    f(x)=a_0+\sum_{n=1}^\infty a_n\cos(nx)+b_n\sin(nx) 
+  \end{equation}
+\end{definition}
+The reason why we use sine and cosine function is that they are orthogonal to each other.
+Meanwhile the Forier series is guaranteed to converge to the function if the function is piecewise smooth.
+Hence the Forier series is more powerful than the Talor series.
+We can use Forier series to approximate the function which is not smooth enough.
 
 
 \subsection{Riemann integration}
@@ -780,7 +798,7 @@ Now lets get into the topic, which 'Integration' the concept first appear in thi
 \end{definition}
 
 
-\begin{definition}[]
+\begin{definition}
   For $$I=[a,b], a<b$$ we define the Riemann integral of a function $f:I\to \R$ as:
   \begin{equation}
     \int_a^b f(x)dx:=\sup\{p.c.\int_{[P]}f|P \text{ is partition of } I\} 
