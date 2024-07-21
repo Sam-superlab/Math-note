@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+
+\title{Integration in Real Analysis}
+\author{Sam Ren}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Summary}
+Integration in real analysis is a foundational concept within the field of mathematics, specifically focusing on the rigorous methods used to calculate the area under curves, among other applications. Historically, the problem of determining areas bounded by curves was tackled by ancient Greek and Chinese mathematicians through the method of exhaustion. This technique laid the groundwork for the development of integral calculus by Isaac Newton and Gottfried Wilhelm Leibniz in the late 17th century, later formalized by Bernhard Riemann in 1854 with the introduction of the Riemann integral, a method applicable to a broader class of functions, including those that are not necessarily continuous.
+
+The Riemann integral is defined as the limit of Riemann sums of a function as the partitions of the interval become finer. This formal definition is pivotal in real analysis, providing a rigorous approach to calculating areas, volumes, and other quantities. Despite its foundational role, the Riemann integral has limitations, particularly in dealing with functions exhibiting discontinuities. To address these shortcomings, Henri Lebesgue introduced the Lebesgue integral in the early 20th century. The Lebesgue integral, rooted in measure theory, extends the concept of integration to a wider class of functions and is especially useful in advanced mathematical contexts such as functional analysis and probability theory.
+
+Integration has vast applications across numerous scientific and engineering disciplines. In physics, it is essential for computing quantities such as work, force, and energy, while in engineering, it aids in the design and analysis of structures by calculating volumes and areas of complex shapes. In economics, integration is used to find total cost and consumer surplus, among other measures. The practical importance of integration underscores its significance in both theoretical and applied mathematics, making it an indispensable tool for solving real-world problems.
+
+Prominent controversies in the history of integration include the priority dispute between Newton and Leibniz over the development of calculus, a debate that sparked nationalistic tensions and shaped the trajectory of mathematical research in Europe. Additionally, the transition from the Riemann to the Lebesgue integral marked a significant shift in mathematical thought, reflecting broader changes in the rigor and scope of mathematical analysis. These historical developments and methodological advances continue to influence the study and application of integration in real analysis today.
+
+\section{Historical Development}
+The concept of integration, which addresses the problem of finding the area bound by a curve, has deep historical roots. The fundamental strategies for solving such problems were known to ancient Greek and Chinese mathematicians and were collectively referred to as the method of exhaustion. This method involved approximating the desired area by increasingly accurate polygonal shapes whose exact areas could be calculated.
+
+The method of exhaustion was later formalized and developed into integral calculus by mathematicians such as Isaac Newton and Gottfried Wilhelm Leibniz in the late 17th century. However, the integration process became more rigorous with the work of Bernhard Riemann in 1854, who provided the first formal definition of integration that was applicable to a broader class of functions, including those that were not necessarily continuous.
+
+Riemann integration involves partitioning the interval of integration into smaller subintervals and summing the areas of rectangular slices that approximate the area under the curve. This method not only helped in calculating areas but also laid the foundation for modern calculus and real analysis by defining integrals in a more rigorous manner.
+
+In the mid-20th century, integration found a diverse range of applications, including computing areas, volumes, central points, and solving various problems in physics and mathematics. The principles of integration, formulated by Leibniz, continue to be fundamental tools in calculus, facilitating the solution of complex mathematical and physical problems.
+
+\section{Definitions and Basic Concepts}
+\subsection{Riemann Integral}
+The Riemann integral, introduced by Bernhard Riemann in 1854 and published in 1868, provides a rigorous definition of the integral of a function on an interval in the branch of mathematics known as real analysis. It is defined as the limit of the Riemann sums of a function as the partitions of the interval become finer and finer. If this limit exists, the function is said to be Riemann-integrable. One important requirement is that the mesh of the partitions must become smaller and smaller, approaching zero.
+
+For the Riemann integral of a function \( f \) to exist and equal \( s \), it must satisfy the following condition: for all \( \epsilon > 0 \), there exists \( \delta > 0 \) such that for any tagged partition \( x_0, \ldots, x_n \) with tags \( t_0, \ldots, t_{n-1} \) whose mesh is less than \( \delta \), the absolute difference between the Riemann sum and \( s \) is less than \( \epsilon \). This condition ensures that the Riemann sum can be made as close as desired to the Riemann integral by making the partition fine enough.
+
+\subsection{Overview}
+Let \( f \) be a non-negative real-valued function on the interval \([a, b]\), and let \( S \) be the region under the graph of the function \( f \) and above the interval \([a, b]\). The area of \( S \) is what the Riemann integral aims to measure. This integral can often be evaluated by the fundamental theorem of calculus or approximated by numerical integration methods.
+
+\subsection{Properties}
+\subsubsection{Linearity}
+The Riemann integral is a linear transformation.
+\[
+\int_a^b (\alpha f + \beta g) = \alpha \int_a^b f + \beta \int_a^b g
+\]
+This property makes the Riemann integral a linear functional on the vector space of Riemann-integrable functions.
+
+\subsubsection{Integrability}
+A function \( f \) is Riemann-integrable if, for every positive \( \epsilon \), there exists a partition such that the Riemann sums differ from the integral by at most \( \epsilon \). This implies that the function must be well-approximated by the sum of the areas of thin rectangles formed by the partitions.
+
+\subsubsection{Examples}
+(Examples of Riemann-integrable functions can be included here.)
+
+\section{Fundamental Theorems}
+\subsection{The Fundamental Theorem of Calculus}
+The Fundamental Theorem of Calculus is central to the entire development of calculus. It establishes a deep relationship between differentiation and integration, and guarantees that any integrable function has an antiderivative. Specifically, it ensures that any continuous function has an antiderivative. The theorem is divided into two parts: the first part uses a definite integral to define an antiderivative of a function, and the second part, also known as the evaluation theorem, allows for the evaluation of a definite integral by evaluating the antiderivative of the integrand at the endpoints of the interval and subtracting.
+
+The theorem can be expressed as follows: If \( f \) is continuous over the interval \([a, b]\) and \( F(x) \) is any antiderivative of \( f(x) \), then
+\[
+\int^b_a f(x)\,dx = F(b) - F(a).
+\]
+This theorem has significant implications. For instance,
+\[
+F2(x) = \lim_{h \to 0} \frac{F(x+h) - F(x)}{h}
+= \lim_{h \to 0} \frac{1}{h} \left[ \int^{x+h}_x f(t)\,dt \right].
+\]
+This expression shows that \( \frac{1}{h} \int^{x+h}_x f(t)\,dt \) is just the average value of the function \( f(x) \) over the interval \([x, x+h]\). By the mean value theorem for integrals, there is some number \( c \) in \([x, x+h]\) such that \( f(c) \) is equal to the average value of the function.
+
+\subsection{Historical Context}
+The relationship between differentiation and integration was discovered and explored by both Sir Isaac Newton and Gottfried Wilhelm Leibniz during the late 1600s and early 1700s. Their work is codified in what we now call the Fundamental Theorem of Calculus, indicating its centrality to calculus. Newton’s contributions to mathematics and physics changed the way we look at the world, and his calculus has spawned entire fields of mathematics.
+
+\subsection{The Mean Value Theorem for Integrals}
+Before delving into the Fundamental Theorem of Calculus, it is important to understand the Mean Value Theorem for Integrals. This theorem guarantees that a point \( c \) exists such that \( f(c) \) is equal to the average value of the function over an interval. The Mean Value Theorem for Integrals is critical for proving the Fundamental Theorem of Calculus and is foundational to understanding the relationship between differentiation and integration.
+
+\subsection{Applications and Significance}
+The Fundamental Theorem of Calculus, particularly Part 2, is perhaps the most significant theorem in calculus.
+
+\section{Techniques of Integration}
+Integration is a fundamental concept in calculus that involves finding a function whose differential is given. This process, known as integration, is the inverse of differentiation and is used to solve a wide range of mathematical problems, including those in physics, engineering, and economics. There are several techniques of integration, each suited to different types of integrands.
+
+\subsection{Basic Techniques}
+\subsubsection{Integration by Substitution}
+Integration by substitution, also known as \( u \)-substitution, is a method used to simplify an integral by making a substitution that transforms the integrand into a simpler form. This technique is based on the chain rule for differentiation. If \( u = g(x) \), then \( du = g'(x)dx \), and the integral can be rewritten in terms of \( u \).
+
+\subsubsection{Integration by Parts}
+Integration by parts is a technique derived from the product rule for differentiation. It is used to integrate products of functions. If \( u = f(x) \) and \( dv = g(x)dx \), then the integral can be expressed as:
+\[
+\int u\,dv = uv - \int v\,du.
+\]
+This method is particularly useful for integrands that are products of polynomial and exponential or trigonometric functions.
+
+\subsection{Advanced Techniques}
+\subsubsection{Partial Fraction Decomposition}
+Partial fraction decomposition is a technique used to integrate rational functions. It involves expressing the integrand as a sum of simpler rational functions, which can then be integrated individually. This method is particularly useful when dealing with polynomials in the denominator that can be factored into linear or quadratic factors.
+
+\subsubsection{Trigonometric Integrals and Substitutions}
+Trigonometric integrals involve integrands that contain trigonometric functions. Techniques for integrating these functions include using trigonometric identities to simplify the integrand or making a trigonometric substitution to transform the integral into a more manageable form.
+
+\subsection{Numerical Integration}
+When an integral cannot be evaluated analytically, numerical integration methods can be used to approximate the value of the integral. Common numerical integration techniques include the trapezoidal rule, Simpson's rule, and Gaussian quadrature. These methods are particularly useful for definite integrals where the integrand is complex or does not have an elementary antiderivative.
+
+\section{Applications of Integration}
+Integration has a wide range of applications across various scientific and engineering disciplines. It is used to calculate areas, volumes, central points, and many other quantities. Some of the key applications of integration include:
+
+\subsection{Physics}
+In physics, integration is used to compute quantities such as work, force, and energy. For example, the work done by a variable force along a path can be found by integrating the force function along the path. Similarly, the potential energy of an object in a gravitational field can be determined by integrating the force of gravity over the distance.
+
+\subsection{Engineering}
+In engineering, integration is essential for designing and analyzing structures. It is used to calculate the area and volume of complex shapes, the center of mass, and moments of inertia. For instance, the stress and strain in a beam under load can be analyzed by integrating the stress distribution along the length of the beam.
+
+\subsection{Economics}
+Integration is also used in economics to find total cost, consumer surplus, and other measures. For example, the total cost function can be obtained by integrating the marginal cost function over the quantity produced. Similarly, consumer surplus is calculated by integrating the demand curve above the market price.
+
+\section{Controversies and Historical Context}
+The history of integration is marked by several prominent controversies and developments. One of the most notable is the priority dispute between Isaac Newton and Gottfried Wilhelm Leibniz over the development of calculus. This dispute, which began in the late 17th century, led to nationalistic tensions and significantly influenced the direction of mathematical research in Europe.
+
+Another significant development was the transition from the Riemann integral to the Lebesgue integral. The Riemann integral, while foundational, has limitations, particularly in handling functions with discontinuities. Henri Lebesgue addressed these limitations by introducing the Lebesgue integral in the early 20th century. The Lebesgue integral, rooted in measure theory, extends the concept of integration to a broader class of functions and is especially useful in advanced mathematical contexts such as functional analysis and probability theory.
+
+\section{Conclusion}
+Integration is a fundamental concept in real analysis with a rich historical development and wide-ranging applications. From its origins in the method of exhaustion used by ancient mathematicians to the formalization of the Riemann integral and the subsequent development of the Lebesgue integral, integration has evolved to become a critical tool in both theoretical and applied mathematics. Its applications in physics, engineering, economics, and other fields underscore its importance in solving real-world problems and advancing our understanding of the natural world.
+
+\end{document}
