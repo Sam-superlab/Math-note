@@ -37,19 +37,19 @@ The notes are written in LaTeX to ensure high-quality typesetting, and PDF versi
 2. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/LaTeX-Notes.git
+    git clone https://github.com/Sam-superlab/Math-note/tree/main
     ```
 
 3. Navigate to the directory of the subject you want to compile:
 
     ```sh
-    cd LaTeX-Notes/Analysis
+    cd Math-note/Analysis Note Math
     ```
 
 4. Compile the `.tex` file using a LaTeX editor or the command line:
 
     ```sh
-    pdflatex analysis.tex
+    pdflatex main.tex
     ```
 
 ## Contributing
