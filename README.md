@@ -37,7 +37,7 @@ The notes are written in LaTeX to ensure high-quality typesetting, and PDF versi
 2. Clone the repository:
 
     ```sh
-    git clone https://github.com/Sam-superlab/Math-note/tree/main
+    git clone https://github.com/Sam-superlab/Math-note
     ```
 
 3. Navigate to the directory of the subject you want to compile:
