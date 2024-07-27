@@ -892,9 +892,25 @@ The derivarive as we already know is the reverse operation of the integral. Henc
 This definition tells us the integrability of the function is based on the limit of the piecewise constant integral. 
 
 
+Now we are going to talk about some property of the Riemann integral:
+\begin{theorem}[Riemann integral is linear]
+Riemann integral is a linear operator. That is for $f,g$ are Riemann integrable on $I$ and $a,b\in \R$ then we have:
+$$\int_{I}(af+bg)=a\int_{I}f+b\int_{I}g$$
+\end{theorem}
 
+We shall now prove this theorem:
 
-
+\begin{proof}[Proof of Riemann integral is linear]
+  For $f,g$ are Riemann integrable on $I$ and $a,b\in \R$ then we have:
+  \begin{equation*}
+    \begin{aligned}
+      \int_{I}(af+bg) &= \sup\{p.c.\int_{[P]}(af+bg)|P \text{ is partition of } I\}\\
+      &= \sup\{p.c.\int_{[P]}(af)+p.c.\int_{[P]}(bg)|P \text{ is partition of } I\}\\
+      &= a\sup\{p.c.\int_{[P]}f|P \text{ is partition of } I\}+b\sup\{p.c.\int_{[P]}g|P \text{ is partition of } I\}\\
+      &= a\int_{I}f+b\int_{I}g
+    \end{aligned}
+  \end{equation*}
+\end{proof}
 
 
 
