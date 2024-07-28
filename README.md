@@ -13,6 +13,7 @@ Welcome to the LaTeX Notes Repository! This repository contains notes on various
 ## Overview
 
 This repository is a collection of comprehensive notes on the following subjects:
+
 - **Analysis**
 - **Topology**
 - **Probability**
@@ -36,21 +37,21 @@ The notes are written in LaTeX to ensure high-quality typesetting, and PDF versi
 1. Ensure you have a LaTeX distribution installed (e.g., TeX Live, MiKTeX).
 2. Clone the repository:
 
-    ```sh
-    git clone https://github.com/Sam-superlab/Math-note
-    ```
+   ```sh
+   git clone https://github.com/Sam-superlab/Math-note
+   ```
 
 3. Navigate to the directory of the subject you want to compile:
 
-    ```sh
-    cd Math-note/Analysis Note Math
-    ```
+   ```sh
+   cd Math-note/Analysis
+   ```
 
 4. Compile the `.tex` file using a LaTeX editor or the command line:
 
-    ```sh
-    pdflatex main.tex
-    ```
+   ```sh
+   pdflatex main.tex
+   ```
 
 ## Contributing
 
@@ -65,22 +66,22 @@ We welcome contributions from everyone! Here are some ways you can contribute:
 1. Fork the repository.
 2. Create a new branch:
 
-    ```sh
-    git checkout -b your-branch-name
-    ```
+   ```sh
+   git checkout -b your-branch-name
+   ```
 
 3. Make your changes.
 4. Commit your changes:
 
-    ```sh
-    git commit -m "Description of your changes"
-    ```
+   ```sh
+   git commit -m "Description of your changes"
+   ```
 
 5. Push to your branch:
 
-    ```sh
-    git push origin your-branch-name
-    ```
+   ```sh
+   git push origin your-branch-name
+   ```
 
 6. Open a pull request on GitHub.
 
@@ -95,5 +96,3 @@ If you have any questions, suggestions, or feedback, feel free to contact us at 
 Happy studying and contributing!
 
 ---
-
-
