@@ -744,6 +744,32 @@ By definition of derivative, we have:
 
 Chain rule is a powerful tool for us to calculate the derivative of a composite function. It is easy to use and very useful in practice.
 
+
+\subsection{Local maximum, minimum}
+We shall now talk about the local maximum and minimum of a function:
+\begin{definition}[local maximum]
+The function $f:I\to \R$ has a local maximum at $x_0\in I$ if there is $\varepsilon>0$ where $f(x)\leq f(x_0),\forall x\in (x_0-\varepsilon,x_0+\varepsilon)$
+\end{definition}
+In a similar way we define the local minimum:
+\begin{definition}[Local minimum]
+The function $f:I\to \R$ has a local minimum at $x_0\in I$ if there is $\varepsilon>0$ where $f(x)\geq f(x_0),\forall x\in (x_0-\varepsilon,x_0+\varepsilon)$
+\end{definition}
+
+Now we shall talk about the relationship between the local maximum and minimum and the derivative of the function:
+\begin{theorem}[Derivative and local maximum, minimum]
+  For function $f:I\to \R$ where $I\in \R$ and $x_0\in I$ is a local maximum or minimum. Then we have $f'(x_0)=0$
+\end{theorem}
+We shall prove this theorem by using the definition of derivative:
+\begin{proof}[Proof of Derivative and local maximum, minimum]
+  Assume $f$ has a local maximum at $x_0$, then we have:
+  \begin{equation*}
+    \lim_{x\to x_0,x\in I\backslash \{x_0\}} \frac{f(x)-f(x_0)}{x-x_0}\leq 0
+  \end{equation*}
+  And we have $f'(x_0)\leq 0$. Similarly we can prove the case of local minimum.
+\end{proof}
+
+
+
 \section{The mean value theorem}
 We now shall talk about a baby version of Mean value theorem which named as Rolles theorem:
 \begin{theorem}
