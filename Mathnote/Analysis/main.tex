@@ -722,6 +722,28 @@ It is obvious that only smooth function are differentiable. Now here are some ex
 By take left and right limit of the function at 0 it is obvious that we will get 2 results: $\{1,-1\}$
 \end{example}
 
+\subsection{Chain Rule}
+While we are going to calculate the derivative of a composite function, we need to use the chain rule:
+\begin{theorem}[chain rule]
+  For two function $f,g$ where $f$ is differentiable at $x_0$ and $g$ is differentiable at $f(x_0)$. Then the composite function $g\circ f$ is differentiable at $x_0$ with derivative:
+  \begin{equation*}
+    (g\circ f)'(x_0)=g'(f(x_0))\cdot f'(x_0)
+  \end{equation*}
+\end{theorem}
+Now we shall give a proof of this theorem:
+\begin{proof}[Proof of Chain rule]
+By definition of derivative, we have:
+\begin{equation*}
+  \begin{aligned}
+    &\lim_{x\to x_0} \frac{g(f(x))-g(f(x_0))}{x-x_0}\\
+    =&\lim_{x\to x_0} \frac{g(f(x))-g(f(x_0))}{f(x)-f(x_0)}\cdot \frac{f(x)-f(x_0)}{x-x_0}\\
+    =&g'(f(x_0))\cdot f'(x_0)
+  \end{aligned}
+\end{equation*}
+\end{proof}
+
+Chain rule is a powerful tool for us to calculate the derivative of a composite function. It is easy to use and very useful in practice.
+
 \section{The mean value theorem}
 We now shall talk about a baby version of Mean value theorem which named as Rolles theorem:
 \begin{theorem}
