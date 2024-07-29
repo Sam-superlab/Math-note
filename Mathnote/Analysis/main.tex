@@ -85,11 +85,11 @@
 
 % ------------------------------------------------------------------------------
 \section{Words before the text}
-In the world of mathematics that full of abstruct terms and concepts.
-We know that the real number is the fundation of all the mathematics. The real number is a set that contains all the rational numbers and irrational numbers.
-The real number is a complete set, which means that it is a set that contains all the limit points of all the sequences.
-It is important because it is the fundation of all the mathematics.
-However, the real number is not enough for us to do the analysis. We need to define the limit, the continuity, the derivative, the integral, and so on.
+in the world of mathematics that full of abstruct terms and concepts.
+we know that the real number is the fundation of all the mathematics. the real number is a set that contains all the rational numbers and irrational numbers.
+the real number is a complete set, which means that it is a set that contains all the limit points of all the sequences.
+it is important because it is the fundation of all the mathematics.
+however, the real number is not enough for us to do the analysis. we need to define the limit, the continuity, the derivative, the integral, and so on.
 Hence the basic structure of this note will be:
 \begin{enumerate}
   \item Define the natural number, the integer, the rational number, and the real number.
@@ -125,6 +125,18 @@ And we denote
 
 
 \section{Real analysis}
+\subsection{Introduce to the topic}
+In order to construct real numbers we need to use the concept of 'Limit of rational sequence'
+This method leads to two freah new terms 
+\begin{itemize}
+  \item The first is limit
+  \item The second is sequence
+\end{itemize}
+And after introduce the method one shall wonder how to ensure the sequences will represent the real numbers
+It is crucial to introduce the concept of Cauchy sequence, where we can ensure that the sequence will converge to a real number.
+Which we will talk about later in detail in the section of sequences.
+Before we start the important concept of Sequences, we need to know the concept of Supremum and Infimum, which are important in the process of defining the limit and real numbers
+
 \subsection{Construction of the real numbers}
 We are going to talk about the construction of real number system from rational number system. We know that the rational number system is not complete, which means that there are some points in the rational number system that cannot be represented by a rational number.
 For example, $\sqrt{2}$ is an irrational number, which means that it cannot be represented by a rational number.
@@ -167,10 +179,6 @@ Therefore, for $a \in A$ and $b \in B$, we have $a \leq x < \sqrt{2} < b$. Final
 
 
 
-
-\clearpage
-\subsection{Order properties of the real numbers}
-\clearpage
 
 \subsection{Sequences}
 \subsection{Supremum \& Infimum}
@@ -820,6 +828,26 @@ And now we can talk about the theorem of these series:
   We can prove this theorem by using the Dirichlet's theorem.
   Where we can show that the partial sum of the Forier series is bounded.
 \end{proof}
+
+\section{Uniform convergence and differentiability}
+In the previous topics we have already talked about the pointwise convergence and uniform convergence of a sequence of functions.
+$$||f_n-f||_\infty \to 0$$ when $n\to \infty$.
+And there is the fact thatl$f_n$ continuous and $||f_n-f||_\infty \to 0$ then $f$ is continuous.
+\begin{definition}
+ $f:I \to \R$ is called diffrerntiable if $f$ is differentiable at all $x_0\in I$
+In this case, $f'(x):I \to \R$ defined by $x \to f'(x)$ is called derivative of $f$.
+\end{definition}
+
+lets look ate an example:
+\begin{example}
+  For function $f_n(x)=x^n$ where $x\in [0,1]$. It is easy to see that $f_n(x)$ is continuous and differentiable on $[0,1]$. However, the limit of the derivative of $f_n$ is not continuous. 
+\end{example}
+
+\begin{theorem}
+Let ($f_1,f_2,f_3,\dots$) be a sequence of functions  $f_n:I\to \R$ 
+Assume $f_n$ is differentiable for all $n$
+Then there is $g:I\to \R$ with $||f^'-g||_\infty \to 0$ when $n\to \infty$
+\end{theorem}
 
 
 \subsection{Riemann integration}
