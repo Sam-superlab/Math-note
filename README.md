@@ -1,6 +1,6 @@
 # Math Notes Repository
 
-Welcome to the LaTeX Notes Repository! This repository contains notes on various topics including Analysis, Topology, Probability, and Algebra. These notes are written in LaTeX and their corresponding PDF files are also available for easy access and study.
+Welcome to the LaTeX Notes Repository! This repository contains notes on various topics including Analysis, Topology, Probability, Algebra and Algorithms. These notes are written in LaTeX and their corresponding PDF files are also available for easy access and study.
 
 ## Table of Contents
 
@@ -18,6 +18,7 @@ This repository is a collection of comprehensive notes on the following subjects
 - **Topology**
 - **Probability**
 - **Algebra**
+- Algorithms
 
 The notes are written in LaTeX to ensure high-quality typesetting, and PDF versions are provided for those who prefer ready-to-read documents.
 
