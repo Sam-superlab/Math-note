@@ -86,12 +86,28 @@ OUTPUT: A permutation (recordering) $<a_1',a_2',\cdots,a_n'>$ of the input seque
 Therefore this algorithm provides a way to reorder the sequence in a descending order.
 The input sequence is called an \textbf{instance} of the sorting problem, and the output sequence is called a \textbf{solution} to the instance.
 
+\\
+We say an algorithm is \textbf{correct} if, for every input instance, it halts with the correct output.
+We use \textbf{halts} to mean that the algorithm terminates in a finite amount of time.
+And one shall note that the correctness of an algorithm is independent of the language in which it is implemented.
+
+\subsection{Data structure}
+\begin{definition}[data strcuture]
+  A data structure is a way to store and organize data in order to facilitate access and modifications.
+\end{definition}
+It is curcial to choose the satisfactory data sctructure for the algorithm
+No single data structure works well for all purposes, so it is important to know the strengths and weaknesses of the various data structures.
 
 
-
-
-
-
+\section{ALGORITHM}
+\subsection{EFFICIENCY}
+Everyone wants to save their time for their family and friends.
+That is why we need to consider the efficiency of the algorithm.
+\begin{example}
+ For insertion sort it takes times around $c_1\cdot n^2$ to solve the problem \\
+ For merge sort takes around $c_2\times n \times \log_{2}n$
+$c_n$ stands for constants that independent of $n$.
+\end{example}
 
 
 
